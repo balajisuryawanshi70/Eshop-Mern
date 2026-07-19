@@ -9,6 +9,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -79,11 +80,11 @@ const Home = () => {
 
             {/* Right */}
             <div className="flex justify-center">
-              <img
-                src="/hero-shopping.png"
-                alt="Shopping"
-                className="w-full max-w-lg drop-shadow-2xl"
-              />
+              <div className="absolute w-72 h-72 bg-white/10 rounded-full blur-3xl top-10 right-20"></div>
+
+              <div className="absolute w-40 h-40 bg-orange-300/20 rounded-full blur-2xl bottom-10 right-40"></div>
+
+              <div className="absolute w-24 h-24 bg-yellow-300 rounded-full animate-ping"></div>
             </div>
 
           </div>

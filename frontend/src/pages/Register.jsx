@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
+import { ShoppingBag } from 'lucide-react'
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -36,11 +37,9 @@ const Register = () => {
 
         {/* Header */}
         <div className="bg-gradient-to-r from-orange-500 to-amber-400 py-8 px-8 text-center">
-          <img
-            src="/ShopNestLogo.png"
-            alt="Eshop-MERN"
-            className="w-20 h-20 rounded-2xl mx-auto bg-white p-2 shadow-lg"
-          />
+          <div className="flex justify-center mb-6">
+            <ShoppingBag size={50} color='orange' />
+          </div>
 
           <h1 className="text-3xl font-bold text-white mt-5">
             Create Account

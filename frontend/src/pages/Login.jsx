@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
+import { ShoppingBag } from 'lucide-react'
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -34,11 +35,7 @@ const Login = () => {
 
         {/* Logo */}
         <div className="flex justify-center mb-6">
-          <img
-            src="/ShopNestLogo.png"
-            alt="Eshop-MERN"
-            className="w-20 h-20 rounded-2xl shadow-lg"
-          />
+          <ShoppingBag size={50} color='orange' />
         </div>
 
         {/* Heading */}
