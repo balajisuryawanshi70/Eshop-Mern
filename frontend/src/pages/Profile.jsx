@@ -234,12 +234,12 @@ const Profile = () => {
 
                       <span
                         className={`px-5 py-2 rounded-full text-sm font-semibold ${order.status === "Delivered"
-                            ? "bg-green-100 text-green-700"
-                            : order.status === "Shipped"
-                              ? "bg-blue-100 text-blue-700"
-                              : order.status === "Cancelled"
-                                ? "bg-red-100 text-red-700"
-                                : "bg-yellow-100 text-yellow-700"
+                          ? "bg-green-100 text-green-700"
+                          : order.status === "Shipped"
+                            ? "bg-blue-100 text-blue-700"
+                            : order.status === "Cancelled"
+                              ? "bg-red-100 text-red-700"
+                              : "bg-yellow-100 text-yellow-700"
                           }`}
                       >
                         {order.status}

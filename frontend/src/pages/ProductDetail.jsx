@@ -188,8 +188,8 @@ const ProductDetail = () => {
                 onClick={handleAddToCart}
                 disabled={product.stock === 0}
                 className={`flex-1 py-4 rounded-xl text-lg font-semibold transition ${product.stock > 0
-                    ? "bg-orange-500 hover:bg-orange-600 text-white"
-                    : "bg-gray-300 cursor-not-allowed text-gray-500"
+                  ? "bg-orange-500 hover:bg-orange-600 text-white"
+                  : "bg-gray-300 cursor-not-allowed text-gray-500"
                   }`}
               >
                 Add to Cart
