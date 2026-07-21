@@ -168,7 +168,7 @@ const AdminDashboard = () => {
             Quick Actions
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
 
             {/* Add Product */}
 
@@ -246,6 +246,26 @@ const AdminDashboard = () => {
 
               <p className="text-gray-400 mt-2">
                 Manage customer accounts.
+              </p>
+            </div>
+
+            {/* Go Shopping */}
+
+            <div
+              onClick={() => navigate("/shop")}
+              className="cursor-pointer rounded-2xl bg-gray-900 border border-gray-800 p-6 hover:border-orange-500 transition"
+            >
+              <FiShoppingBag
+                className="text-orange-500"
+                size={40}
+              />
+
+              <h3 className="text-xl font-bold mt-5">
+                Go Shopping
+              </h3>
+
+              <p className="text-gray-400 mt-2">
+                Browse products and place orders.
               </p>
             </div>
 
