@@ -20,7 +20,7 @@ app.use(async (req, res, next) => {
 
 // Set CORS for frontend URL / allow single-node deploy
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://127.0.0.1:5173', process.env.FRONTEND_URL].filter(Boolean),
+  origin: ['https://eshop-mern-4klq.vercel.app', 'http://127.0.0.1:5173', process.env.FRONTEND_URL].filter(Boolean),
   credentials: true
 }));
 
