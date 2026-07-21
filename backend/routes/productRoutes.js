@@ -3,7 +3,15 @@ const { getProducts, getProductById, createProduct, updateProduct, deleteProduct
 const { protect } = require('../middleware/authMiddleware');
 const { admin } = require('../middleware/adminMiddleware');
 const multer = require('multer');
-const upload = multer({ dest: 'uploads/' });
+const os = require('os');
+
+// Use OS temp directory to support read-only serverless environments like Vercel
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, os.tmpdir());
+  }
+});
+const upload = multer({ storage });
 
 const router = express.Router();
 
