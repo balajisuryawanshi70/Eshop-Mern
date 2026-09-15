@@ -10,7 +10,7 @@ const generateToken = (id) => {
 const registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
-    
+
     const userExists = await User.findOne({ email });
     if (userExists) return res.status(400).json({ message: 'User already exists' });
 
@@ -19,10 +19,10 @@ const registerUser = async (req, res) => {
 
     const user = await User.create({ name, email, password: hashedPassword });
     if (user) {
-      
+
       // Generate a mock OTP
       const otp = Math.floor(100000 + Math.random() * 900000);
-      
+
       // Send Welcome / OTP Email
       const message = `
         <h2>Welcome to Eshop-Mern, ${name}!</h2>
